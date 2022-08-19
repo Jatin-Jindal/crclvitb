@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/crclvitb/static/js/main.d884335f.js",
+    "main.js": "/crclvitb/static/js/main.303de40f.js",
     "index.html": "/crclvitb/index.html",
-    "main.d884335f.js.map": "/crclvitb/static/js/main.d884335f.js.map"
+    "main.303de40f.js.map": "/crclvitb/static/js/main.303de40f.js.map"
   },
   "entrypoints": [
-    "static/js/main.d884335f.js"
+    "static/js/main.303de40f.js"
   ]
 }
