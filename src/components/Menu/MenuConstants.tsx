@@ -1,7 +1,7 @@
 const defSnacks = ["Milk, Tea, Coffee"];
 const defBreak = ["Bread, Butter, Jam", ...defSnacks, "Banana/Fruit Salad"];
 
-export default {
+const MenuConstants = {
   Monday: {
     Breakfast: [
       ...defBreak,
@@ -146,3 +146,5 @@ export default {
     Dinner: ["Chappati", "Rice", "Bhindi Bhaji", "Dal Makhani", "Gulab Jamun"],
   },
 };
+
+export default MenuConstants;

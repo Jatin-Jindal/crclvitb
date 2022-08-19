@@ -4,7 +4,7 @@ import {
   VStack,
   Grid,
   theme,
-  Button,
+  Container,
 } from "@chakra-ui/react";
 import React from "react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
@@ -34,18 +34,30 @@ export const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
+        <Grid minH="100vh" p={3} maxW="100%">
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8} style={{ justifyContent: "space-between" }}>
             <Menu currentDay={day} currentMeal={meal} />
-
+          </VStack>
+          <Container
+            as="footer"
+            role="dayPicker"
+            style={{
+              bottom: 0,
+              position: "absolute",
+              maxWidth: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <DayPicker
               dayChanger={setDay}
               mealChanger={setMeal}
               currentMeal={meal}
               currentDay={day}
+              style={{ width: "100vh" }}
             />
-          </VStack>
+          </Container>
         </Grid>
       </Box>
     </ChakraProvider>

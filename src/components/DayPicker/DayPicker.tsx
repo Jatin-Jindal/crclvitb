@@ -1,5 +1,5 @@
-import { Button, ButtonGroup, Grid, GridItem, VStack } from "@chakra-ui/react";
-import React, { Component } from "react";
+import { Button, ButtonGroup, VStack } from "@chakra-ui/react";
+import React from "react";
 
 const dayStyle = {
   borderRadius: "0.5rem",
@@ -20,6 +20,7 @@ interface DayPickerProps {
   mealChanger: React.Dispatch<React.SetStateAction<string>>;
   currentMeal?: string;
   currentDay?: string;
+  style?: React.CSSProperties;
 }
 
 export const DayPicker: React.FC<DayPickerProps> = ({
@@ -27,6 +28,7 @@ export const DayPicker: React.FC<DayPickerProps> = ({
   mealChanger,
   currentDay,
   currentMeal,
+  style,
 }) => {
   const days = [
     "Monday",
@@ -39,7 +41,7 @@ export const DayPicker: React.FC<DayPickerProps> = ({
   ];
   const meals = ["Breakfast", "Lunch", "Snacks", "Dinner"];
   return (
-    <VStack spacing={1} w="100%">
+    <VStack spacing={1} w="100%" style={style}>
       <ButtonGroup gap="4px" w="100%">
         {meals.map((meal) => (
           <Button
@@ -58,7 +60,7 @@ export const DayPicker: React.FC<DayPickerProps> = ({
             style={day === currentDay ? activeStyle : dayStyle}
             onClick={() => dayChanger(day)}
           >
-            {day}
+            {day[0]}
           </Button>
         ))}
       </ButtonGroup>
