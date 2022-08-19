@@ -36,7 +36,7 @@ export const App = () => {
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={0} maxW="100%">
           <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8} style={{ justifyContent: "space-between" }}>
+          <VStack spacing={8} pos="absolute" top="10vh" minW="100%">
             <Menu currentDay={day} currentMeal={meal} />
           </VStack>
           <Container
