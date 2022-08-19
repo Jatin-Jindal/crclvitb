@@ -6,13 +6,15 @@ const dayStyle = {
   padding: "0px",
   margin: "0px",
   width: "100%",
-  opacity: "0.5",
+  // opacity: "0.5",
   fontWeight: "normal",
 };
 const activeStyle = {
   ...dayStyle,
   opacity: "1.0",
   fontWeight: "bolder",
+  backgroundColor: "#0096FF",
+  color: "#1a1a1a",
 };
 
 interface DayPickerProps {

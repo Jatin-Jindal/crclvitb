@@ -34,7 +34,7 @@ export const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3} maxW="100%">
+        <Grid minH="100vh" p={0} maxW="100%">
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8} style={{ justifyContent: "space-between" }}>
             <Menu currentDay={day} currentMeal={meal} />
@@ -48,6 +48,7 @@ export const App = () => {
               maxWidth: "100%",
               display: "flex",
               justifyContent: "center",
+              // paddingBottom: "4rem",
             }}
           >
             <DayPicker
