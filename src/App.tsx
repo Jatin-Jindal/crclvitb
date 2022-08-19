@@ -43,7 +43,7 @@ export const App = () => {
             as="footer"
             role="dayPicker"
             style={{
-              bottom: 0,
+              bottom: "2vh",
               position: "absolute",
               maxWidth: "100%",
               display: "flex",
